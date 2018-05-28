@@ -37,5 +37,6 @@ to calculate x
 n
 <br>
 Please note that in your function you can use only the basic arithmetic operators (+, -,
-*, %, and /).
+*, %, and /). <br>
+
 (b.2) What is the running time complexity of your function? Justify.
