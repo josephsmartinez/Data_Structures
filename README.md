@@ -1,7 +1,7 @@
 # Data_Structures
 
-From my COP3530 class 2018 Summer C
-
+<strong>From my COP3530 class 2018 Summer C</strong>
+<p>
 Summary Description:
 Basic concepts of data organization, the running time of a program, abstract types, data structures including linked lists, n-ary trees, sets and graphs, internal sorting.
 Prerequisites:
@@ -21,3 +21,4 @@ Be familiar with several sub-quadratic sorting algorithms including Quicksort, M
 Be familiar with some graph algorithms such as topological sort, shortest path and minimum spanning tree.
 Master the standard data structure library of a major programming language (e.g. java.util).
 Master analyzing problems and writing program solutions to problems using the above techniques and data structures.
+</p>
