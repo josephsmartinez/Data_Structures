@@ -37,7 +37,7 @@ c) Show the result when an initially empty AVL tree has keys 1 through 7 inserte
 d) Draw an AVL tree of height 4 that contains the minimum possible number of nodes.
 <hr>
 
-<h3>Problem #3: (35 point)</h3><br>
+<h3>Problem #3: (30 point)</h3><br>
 (a) Consider a binary min-heap. We have a method that print the keys as encountered in a
 preorder traversal. Is the output sorted? Justify your answer. Attempt the same question
 for inorder and postorder traversal.
