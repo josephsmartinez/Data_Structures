@@ -161,11 +161,20 @@ public class BinarySearchTree {
     }
 
     /**
-     * This class
-     *
+     * Method will remove the minimum value within the tree. 
+     * @Mark Allen Data Structures  PG 117 (FindMin) & 120(Removal)
+     * 
+     * If the number of deletions is expected to be small, then a popular strategy to use is
+     * lazy deletion: When an element is to be deleted, it is left in the tree and merely marked
+     * 
+     * If the number of real nodes in the tree is the same as the number of “deleted” nodes, then the depth of
+     * the tree is only expected to go up by a small constant, so there is a very small time
+     * penalty associated with lazy deletion. Also, if a deleted item is reinserted, the overhead of
+     * allocating a new cell is avoided.
+     * 
      * @param node is the root value, then continues until the smallest value
      * found in the BST
-     * @return the next left-node until null, then
+     * @return the next left-node
      */
     private Node deleteMin(Node node) {
         //Base Case
@@ -206,6 +215,13 @@ public class BinarySearchTree {
         public String toString() {
             return Integer.toString(key);
         }
+           public int minValue() {
+            if (leftNode == null)
+                  return key;
+            else
+                  return leftNode.minValue();
+
+      }
     }//end inner class
 
     public static void main(String[] args) {
@@ -222,6 +238,8 @@ public class BinarySearchTree {
         bst.addNode(1);
         bst.addNode(6);
         bst.addNode(9);
+        
+       // System.out.println(bst.root.minValue());
 
         //Print tree
         System.out.println("Printing the BST");
