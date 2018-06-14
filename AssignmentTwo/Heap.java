@@ -168,27 +168,25 @@ public class Heap {
      * and restore the Max-Heap property after the change. If the oldKey does
      * not exist in the heap, the method prints an appropriate message and
      * returns without changing the heap.
-     * 
-     * Worst case running time = O(N) if the node is not found
-     * Best case running time = O(1) if the node to change is the root
+     *
+     * Worst case running time = O(N) if the node is not found Best case running
+     * time = O(1) if the node to change is the root
      *
      * @param oldKey
      * @param newKey
-     * 
+     *
      * https://courses.csail.mit.edu/6.006/fall10/handouts/recitation10-8.pdf
      * Heap Algorithms
-     * 
-     * Heap-Increase-Key(A, i, key)
-     * Input: A: an array representing a heap, i: an array index, key: a new key greater than A[i]
-     * Output: A still representing a heap where the key of A[i] was increased to key
-     * Running Time: O(log n) where n =heap-size[A]
-     * if key < A[i]
+     *
+     * Heap-Increase-Key(A, i, key) Input: A: an array representing a heap, i:
+     * an array index, key: a new key greater than A[i] Output: A still
+     * representing a heap where the key of A[i] was increased to key Running
+     * Time: O(log n) where n =heap-size[A] if key < A[i]
      * error(“New key must be larger than current key”)
      * A[i] ← key
-     * while i > 1 and A[Parent(i)] < A[i]
-     * exchange A[i] and A[Parent(i)]
-     * i ← Parent(i)
-     * 
+     * while i > 1 and A[Parent(i)] < A[i] exchange A[i] and A[Parent(i)] i ←
+     * Parent(i)
+     *
      */
     public void replaceKey(Integer oldKey, Integer newKey) {
         int i;
@@ -215,7 +213,7 @@ public class Heap {
                 i--;
             }
         } else {
-            System.out.println("Element: " + newKey + " not found!");
+            System.out.println("Element: " + oldKey + " not found!");
         }
     }
 
