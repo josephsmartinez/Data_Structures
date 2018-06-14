@@ -248,7 +248,7 @@ public class BinarySearchTree {
 
         //Sum the values within the tree using the keySum methods
         System.out.println("Three sum is: " + bst.keySum());
-        System.out.println("Three sum is: " + bst.keySum());
+      //  System.out.println("Three sum is: " + bst.keySum());
 
         //Remove the minimum value withing the tree. 
         System.out.println("Removing the Minimum value in the tree:");
