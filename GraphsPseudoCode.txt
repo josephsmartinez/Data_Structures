@@ -1,0 +1,71 @@
+Topological sort algorithm
+
+GraphTopologicalSort(graph) {
+   resultList = empty list of vertices
+   noIncoming = list of all vertices with no incoming edges
+   remainingEdges = list of all edges in the graph
+
+   while (noIncoming is not empty) {
+      currentV = remove any vertex from noIncoming
+      Add currentV to resultList
+      outgoingEdges = remove currentV's outgoing edges from remainingEdges
+      for each edge currentE in outgoingEdges {
+         inCount = GraphGetIncomingEdgeCount(remainingEdges, currentE->toVertex)
+         if (inCount == 0)
+            Add currentE->toVertex to noIncoming
+      }
+   }
+   return resultList
+}
+
+
+GraphGetIncomingEdgeCount(edgeList, vertex) {
+   count = 0
+   for each edge currentE in edgeList {
+      if (edge->toVertex == vertex)
+         count = count + 1
+   }
+   return count
+}
+
+
+-----------------------------------------------------------
+
+First Implementation O(|V|^2)
+
+labelEachVertexWithInDegree();
+
+for(counter = 0; counter < numVertices; counter++)
+{
+	v = findNewVertexOfDegreeZero();  // This will cause O(|V|^2)
+	put v next in output
+	for each w adjacent to v 
+		w.indegree --;
+}
+
+
+Improved Implementation O(|V|+|E|)
+
+labelEachVertexWithInDegree();
+
+for(counter = 0; counter < numVertices; counter++)
+{
+	v = dequeue();			//The first element removed will be with degree == 0
+	put v next in output
+	
+	for each w adjacent to v
+	{
+		w.indegree --;		
+		if(w.indegree == 0) //If we find a 'w' with 0 degree then put it in the queue
+			enqueue(w);     //Put is in da queue
+	}
+}
+
+
+Algorithm efficiency
+
+The two vertex lists used in the topological sort algorithm will at most contain all the vertices 
+in the graph. The remaining-edge list will at most contain all edges in the graph. Therefore, for 
+a graph with a set of vertices V and a set of edges E, the space complexity of topological sorting
+is O(|V|+|E|). If a graph implementation allows for retrieval of a vertex's incoming and outgoing
+edges in constant time, then the time complexity of topological sorting is also O(|V|+|E|).

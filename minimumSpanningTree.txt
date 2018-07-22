@@ -1,0 +1,53 @@
+-----------------------------------------------------------
+Kruskal's minimum spanning tree algorithm
+-----------------------------------------------------------
+
+KruskalsMinimumSpanningTree(graph) {
+   edgeList = list containing all edges from graph
+   vertexSets = collection of vertex sets, empty initially
+   for each vertex V in graph
+      Add new set containing only V to vertexSets
+   resultList = new, empty set of edges
+
+   while (vertexSets->length > 1 && edgeList->length > 0) {
+      nextEdge = remove edge with minimum weight from edgeList
+      vSet1 = set in vertexSets containing nextEdge->vertex1
+      vSet2 = set in vertexSets containing nextEdge->vertex2
+      if (vSet1 != vSet2) {
+         Add nextEdge to resultList
+         Remove vSet1 and vSet2 from vertexSets
+         merged = union(vSet1, vSet2)
+         Add merged to vertexSets
+      }
+   }
+   return resultList
+}
+
+
+-----------------------------------------------------------
+Prim's Algorithm
+-----------------------------------------------------------
+
+Consider a graph G = (V, E, W);
+
+T: a tree consisting of only the starting vertex v;
+
+while ( T has fewer than |V| vertices ) 
+{
+	e <- find a smallest edge connecting T to G/T;
+	add e to T;
+}
+
+-----------------------------------------------------------
+Prim's Algorithm
+-----------------------------------------------------------
+
+Consider a graph G = (V, E, W);
+
+T: a tree consisting of only the starting vertex v;
+
+while ( T has fewer than |V| vertices ) 
+{
+	e <- find a smallest edge connecting T to G/T;
+	add e to T;
+}

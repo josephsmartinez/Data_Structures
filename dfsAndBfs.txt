@@ -1,0 +1,115 @@
+-----------------------------------------------------------
+Depth First Graph Search (DFS)
+-----------------------------------------------------------
+//Probelm: We will have to vist the a marked node mode than once.
+
+void dfs( Vertex v ) 
+{
+	v.visted = true;
+	
+	for each vertex w adjacent to v
+		if( !w.vistied )
+			dsf(w);			
+}
+
+
+
+-----------------------------------------------------------
+
+Improved implementation using a stack
+
+DFS( Vertex v )
+{
+	mark v visted
+	print v
+	
+	make an empty stack S
+	push all vertices adjacent to v onto S
+	mark as visited all vertices adjacent to v
+	
+	while S is not empty do
+	{
+		w is pop from S
+		print w
+	
+		for all Vertex u adjacent then
+		{
+			mark u visted
+			push u onto S
+		}
+	}
+}
+
+
+-----------------------------------------------------------
+
+DFS( startV )
+{
+   Push startV to stack
+
+   while ( stack is not empty )
+      currentV = Pop stack
+      "Visit" currentV
+      if ( currentV is not in visitedSet )
+         Add currentV to visitedSet
+         for each vertex adjV adjacent to currentV
+               Push adjV to stack			   
+}			   
+
+			   
+-----------------------------------------------------------
+
+ Recursive depth-first search
+ 
+ RecursiveDFS(currentV) 
+{
+   if ( currentV is not in visitedSet )
+      Add currentV to visitedSet
+      "Visit" currentV
+      for each vertex adjV adjacent to currentV
+         RecursiveDFS(adjV)
+} 
+
+-----------------------------------------------------------
+Breadth First Search (
+-----------------------------------------------------------
+
+BFS(startV)   
+   Push startV to frontierQueue
+   Add  startV to discoveredSet
+
+   while ( frontierQueue is not empty )
+      currentV = Pop frontierQueue
+      "Visit" currentV
+      for each vertex adjV adjacent to currentV
+         if ( adjV is not in discoveredSet )
+            Push adjV to frontierQueue
+            Add  adjV to discoveredSet
+			
+-----------------------------------------------------------
+
+
+BFS ( Vertex v ) 
+{
+	make an empty queue Q
+	enqueue v
+	mark v as visted
+	
+	while ( Q is not empty ) do
+	{
+		vertex w is dequeue from Q
+		print w
+		for all Vertex u adjacent to w do
+		{
+			if ( u is not visted ) then
+			{
+				mark u as visited
+				enqueue u into Q
+			}
+		}
+	}
+}
+
+
+
+

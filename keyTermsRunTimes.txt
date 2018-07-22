@@ -1,0 +1,46 @@
+Key Terms
+
+	Topological Sort
+
+	Directed Acyclic Graph (DAG)
+
+	Sparse Graph
+	
+	Depth First Graph Search (DFS) 		-> Stack
+	
+	Brearth First Graph Search (BFS) 	-> Queue
+	
+	Inorder - With a binay tree you'll get e elements in order
+	
+	Postorder - From the leaf to the parent node
+	
+	Preorder - The only ordering root comes first
+	
+	Minimum Spanning Tree
+	
+	Prim's Algorithm
+	
+	Kruskal's Algorithm
+	
+	Greedy Strategy
+	
+	
+	
+
+Space Complexity
+
+
+
+Time Complexity
+
+	Topological Sort (without implementation of queue) 	= O( |V| ^ 2 )
+	
+	Topological Sort (with queue) 						= O( |V| + |E| )	
+	
+	DFS and BFS 										= O( |V| + |E| )
+	
+	Prim's Algorithm (without heaps) (dense graphs)		= O (|V| ^ 2 )
+	
+	Prim's Algorithm (heaps) (sparse graphs) 			= O ( |E| log |V| )
+
+	
