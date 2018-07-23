@@ -25,17 +25,16 @@ KruskalsMinimumSpanningTree(graph) {
 
 
 -----------------------------------------------------------
-Prim's Algorithm
+Kruskal's Algorithm
 -----------------------------------------------------------
 
-Consider a graph G = (V, E, W);
-
-T: a tree consisting of only the starting vertex v;
-
-while ( T has fewer than |V| vertices ) 
+Sort edge by weight (better: put in min-heap)
+T = empty
+while output size < |V| - 1
 {
-	e <- find a smallest edge connecting T to G/T;
-	add e to T;
+	Consider next smallest edge, e = ( u, v )
+	if( e does not creat a cycle with edge in T )
+		add e to T
 }
 
 -----------------------------------------------------------
