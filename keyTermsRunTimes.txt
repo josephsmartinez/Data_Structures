@@ -24,6 +24,8 @@ Key Terms
 	
 	Greedy Strategy
 	
+	Dijkstra's Algorithm
+	
 	
 	
 
@@ -44,3 +46,5 @@ Time Complexity
 	Prim's Algorithm (heaps) (sparse graphs) 			= O ( |E| log |V| )
 
 	Kruskal's Algorithm									= O ( |E| log |E| ) 
+	
+	Dijkstra's Algorithm								= O ( |V| ^ 2 ) 
